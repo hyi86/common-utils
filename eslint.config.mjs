@@ -18,6 +18,7 @@ export const config = [
     },
     rules: {
       'no-undef': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
       quotes: ['error', 'single', { allowTemplateLiterals: false }],
     },
     ignores: ['dist/**'],

@@ -5,5 +5,5 @@ Common utils for my projects
 ## Installation
 
 ```bash
-pnpm add @hyi86/common-utils
+pnpm add @henry-hong/common-utils
 ```
