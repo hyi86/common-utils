@@ -33,7 +33,8 @@
     "lint": "eslint . --max-warnings 0",
     "test": "vitest",
     "build": "tsup",
-    "ci:publish": "pnpm build && pnpm publish"
+    "prepare": "pnpm build",
+    "ci:publish": "pnpm publish"
   },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
