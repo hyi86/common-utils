@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { clamp, random, zerofill, format } from './number';
+import { clamp, random, zerofill, format } from '../src/number';
 
 describe('clamp', () => {
   it('최소/최대값으로 제한', () => {

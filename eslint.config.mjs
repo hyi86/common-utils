@@ -9,6 +9,9 @@ import tseslint from 'typescript-eslint';
  * @type {import("eslint").Linter.Config[]}
  * */
 export const config = [
+  {
+    ignores: ['dist/**', '__tests__/**'],
+  },
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
@@ -21,7 +24,6 @@ export const config = [
       '@typescript-eslint/no-explicit-any': 'off',
       quotes: ['error', 'single', { allowTemplateLiterals: false }],
     },
-    ignores: ['dist/**'],
   },
 ];
 

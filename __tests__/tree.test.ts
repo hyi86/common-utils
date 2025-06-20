@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildTree, flattenTree, getAllFolderPaths } from './tree';
+import { buildTree, flattenTree, getAllFolderPaths } from '../src/tree';
 
 describe('buildTree', () => {
   it('경로 배열로 트리 구조를 만든다', () => {

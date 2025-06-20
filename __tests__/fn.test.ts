@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { delay, once, debounceAsync } from './fn';
+import { delay, once, debounceAsync } from '../src/fn';
 
 describe('delay', () => {
   it('ms만큼 지연 후 resolve된다', async () => {

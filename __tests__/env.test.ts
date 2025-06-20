@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseEnvToJson, convertJsonToEnv } from './env';
+import { parseEnvToJson, convertJsonToEnv } from '../src/env';
 
 describe('parseEnvToJson', () => {
   it('env 문자열을 JSON 객체로 변환한다', () => {

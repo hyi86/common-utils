@@ -8,7 +8,7 @@ import {
   decryptWithRsaPrivateKey,
   encryptWithRsaPrivateKey,
   decryptWithRsaPublicKey,
-} from './encrypt';
+} from '../src/encrypt';
 
 describe('createOneWayHash', () => {
   it('동일 입력에 대해 동일 해시를 반환한다', () => {

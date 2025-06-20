@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { ceil, floor, max, mean, min, round, sum } from './math';
+import { ceil, floor, max, mean, min, round, sum } from '../src/math';
 
 describe('ceil', () => {
   it('올림 처리', () => {

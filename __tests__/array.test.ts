@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { chunk, difference, differenceFrom, range, intersection, sortedUniq, union, uniq, move } from './array';
+import { chunk, difference, differenceFrom, range, intersection, sortedUniq, union, uniq, move } from '../src/array';
 
 describe('chunk', () => {
   it('배열을 청크로 분할한다', () => {
