@@ -1,6 +1,8 @@
 # Common Utils
 
-Common utils for my projects
+[![NPM Version](https://img.shields.io/npm/v/%40henry-hong%2Fcommon-utils)](https://www.npmjs.com/package/@henry-hong/common-utils)
+
+Common utils for monorepo projects
 
 ## Installation
 

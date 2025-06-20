@@ -1,4 +1,5 @@
 import { clamp } from '~/number';
+import { type LiteralUnion } from 'type-fest';
 
 const RESET = '\x1b[0m';
 
@@ -14,21 +15,20 @@ const rgb = (value: string) => (text: string) => {
   return `\x1b[38;2;${clampedRed};${clampedGreen};${clampedBlue}m${text}${RESET}`; // bg: \x1b[48;2;...
 };
 
-export const colors = {
-  process: rgb('156 163 175'),
-  success: rgb('34 197 94'),
-  info: rgb('59 130 246'),
-  warn: rgb('250 204 21'),
-  error: rgb('239 68 68'),
-  green: rgb('34 197 94'),
-  dim: rgb('156 163 175'),
-  dim2: rgb('107 114 128'),
-  cyan: rgb('59 130 246'),
-  white: rgb('217 217 217'),
-  yellow: rgb('250 204 21'),
-};
+export const green = rgb('34 197 94');
+export const dim = rgb('156 163 175');
+export const dim2 = rgb('107 114 128');
+export const cyan = rgb('59 130 246');
+export const white = rgb('217 217 217');
+export const yellow = rgb('250 204 21');
 
-type LogType = 'process' | 'success' | 'info' | 'warn' | 'error' | 'none';
+export const processColor = rgb('156 163 175');
+export const successColor = rgb('34 197 94');
+export const infoColor = rgb('59 130 246');
+export const warnColor = rgb('250 204 21');
+export const errorColor = rgb('239 68 68');
+
+type LogType = LiteralUnion<'process' | 'success' | 'info' | 'warn' | 'error', string>;
 
 /**
  * `Edge runtime` 과 `Node.js`, `web` 에서 동일한 콘솔 로그 스타일을 유지하기 위한 유틸리티 Logger
@@ -54,22 +54,22 @@ export function devLog(type: LogType, ...args: any[]) {
 
   switch (type) {
     case 'process':
-      log(colors.process(` ⠋ ${now}`), ...args);
+      log(processColor(` ⠋ ${now}`), ...args);
       return;
     case 'success':
-      log(colors.success(` ✓ ${now}`), ...args);
+      log(successColor(` ✓ ${now}`), ...args);
       return;
     case 'info':
-      log(colors.info(` ○ ${now}`), ...args);
+      log(infoColor(` ○ ${now}`), ...args);
       return;
     case 'warn':
-      log(colors.warn(` ⚠ ${now}`), ...args);
+      log(warnColor(` ⚠ ${now}`), ...args);
       return;
     case 'error':
-      log(colors.error(` ✗ ${now}`), ...args);
+      log(errorColor(` ✗ ${now}`), ...args);
       return;
     default:
-      log(...args);
+      log(whiteSpace, ...args);
       return;
   }
 }
