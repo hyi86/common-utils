@@ -1,5 +1,5 @@
+import type { LiteralUnion } from 'type-fest';
 import { clamp } from '~/number';
-import { type LiteralUnion } from 'type-fest';
 
 const RESET = '\x1b[0m';
 
@@ -21,12 +21,16 @@ export const dim2 = rgb('107 114 128');
 export const cyan = rgb('59 130 246');
 export const white = rgb('217 217 217');
 export const yellow = rgb('250 204 21');
+export const magenta = rgb('219 39 119');
+export const red = rgb('239 68 68');
 
 export const processColor = rgb('156 163 175');
 export const successColor = rgb('34 197 94');
 export const infoColor = rgb('59 130 246');
 export const warnColor = rgb('250 204 21');
 export const errorColor = rgb('239 68 68');
+
+export const whiteSpace = ' '.repeat(13);
 
 type LogType = LiteralUnion<'process' | 'success' | 'info' | 'warn' | 'error', string>;
 
@@ -69,9 +73,7 @@ export function devLog(type: LogType, ...args: any[]) {
       log(errorColor(` ✗ ${now}`), ...args);
       return;
     default:
-      log(whiteSpace, ...args);
+      log(whiteSpace, type, ...args);
       return;
   }
 }
-
-export const whiteSpace = ' '.repeat(13);
