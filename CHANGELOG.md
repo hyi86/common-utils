@@ -1,5 +1,11 @@
 # @henry-hong/common-utils
 
+## 0.1.9
+
+### Patch Changes
+
+- 0c5ada5: fix: devlog print empty with no types
+
 ## 0.1.8
 
 ### Patch Changes
